@@ -4,156 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="ready"
     tools:context=".MainActivity">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/grid"
-        android:layout_width="338dp"
-        android:layout_height="215dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="183dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        app:columnCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="2">
-
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="165dp"
-            android:layout_height="107dp"
-            android:background="#009688"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="200"
-            android:inputType="number"
-            android:shadowColor="@color/design_default_color_error"
-            android:textColor="#090909"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="184dp"
-            android:layout_height="98dp"
-            android:background="#03A9F4"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="300"
-            android:inputType="number"
-            android:shadowColor="@color/purple_500"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="168dp"
-            android:layout_height="95dp"
-            android:background="#CDDC39"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="400"
-            android:inputType="number"
-            android:shadowColor="@color/teal_700"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="181dp"
-            android:layout_height="104dp"
-            android:background="#7F54CC"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="500"
-            android:inputType="number"
-            android:shadowColor="@color/design_default_color_secondary_variant"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-    </androidx.gridlayout.widget.GridLayout>
-
-    <EditText
-        android:id="@+id/timer"
-        android:layout_width="77dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="50dp"
-        android:background="#8BC34A"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="00:00"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/score"
-        android:layout_width="79dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:background="#EF0A0A"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="0/0"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/calculation"
-        android:layout_width="162dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:background="#FFC107"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="100 + 100"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/score"
-        app:layout_constraintStart_toEndOf="@+id/timer"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="DONE"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid" />
-
     <Button
-        android:id="@+id/playAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="166dp"
-        android:layout_marginLeft="166dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:text="PLAY AGAIN!!"
-        android:visibility="invisible"
+        android:id="@+id/goButton"
+        android:layout_width="165dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:background="#087E0D"
+        android:onClick="ready"
+        android:text="GO!!"
+        android:textColor="#0F1010"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:backgroundTint="#EDA740"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/done" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
