@@ -54,7 +54,7 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:background="#CF87DC"
+        android:background="#3C3F41"
         android:ems="10"
         android:gravity="center"
         android:hint="20/20"
@@ -88,8 +88,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="294dp"
+        android:layout_height="294dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="63dp"
@@ -101,49 +101,56 @@
         app:layout_constraintTop_toBottomOf="@+id/editTimer"
         app:rowCount="2">
 
-        <TextView
-            android:id="@+id/option1"
-            android:layout_width="138dp"
-            android:layout_height="138dp"
-            android:background="#76C6EA"
-            android:gravity="center"
-            android:hint="200"
-            android:textColor="@color/black"
-            android:textSize="55dp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="131dp"
+            android:layout_height="139dp"
+            android:hint="40"
+            android:onClick="ready"
+            android:tag="1"
+            android:textColor="#121111"
+            android:textColorHint="#191818"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:backgroundTint="#CF3F1A" />
 
-        <TextView
-            android:id="@+id/option2"
-            android:layout_width="138dp"
-            android:layout_height="138dp"
-            android:background="#FA845F"
-            android:gravity="center"
-            android:hint="200"
-            android:textColor="@color/black"
-            android:textSize="55dp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="139dp"
+            android:layout_height="139dp"
+            android:hint="40"
+            android:onClick="ready"
+            android:tag="2"
+            android:textColor="#121111"
+            android:textColorHint="#191818"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:backgroundTint="#CB69DC" />
 
-        <TextView
-            android:id="@+id/option3"
-            android:layout_width="138dp"
-            android:layout_height="138dp"
-            android:background="#5BEADC"
-            android:gravity="center"
-            android:hint="200"
-            android:textColor="@color/black"
-            android:textSize="55dp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="139dp"
+            android:layout_height="139dp"
+            android:hint="40"
+            android:onClick="ready"
+            android:tag="3"
+            android:textColor="#121111"
+            android:textColorHint="#191818"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:backgroundTint="#5DED35" />
 
-        <TextView
-            android:id="@+id/option4"
-            android:layout_width="138dp"
-            android:layout_height="138dp"
-            android:background="#A8A3F3"
-            android:gravity="center"
-            android:hint="200"
-            android:textColor="@color/black"
-            android:textSize="55dp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="139dp"
+            android:layout_height="139dp"
+            android:hint="40"
+            android:tag="4"
+            android:textColor="#121111"
+            android:textColorHint="#191818"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:backgroundTint="#D8B755" />
     </androidx.gridlayout.widget.GridLayout>
 
     <TextView
@@ -155,7 +162,7 @@
         android:layout_marginTop="460dp"
         android:layout_marginEnd="121dp"
         android:layout_marginRight="121dp"
-        android:background="#ED97779C"
+        android:background="#3C3F41"
         android:gravity="center"
         android:text="STATUS"
         android:textColor="#0B0A0A"
