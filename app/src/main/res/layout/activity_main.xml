@@ -32,10 +32,10 @@
     <EditText
         android:id="@+id/editTimer"
         android:layout_width="83dp"
-        android:layout_height="68dp"
+        android:layout_height="62dp"
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="34dp"
         android:background="#F8E74F"
         android:ems="10"
         android:gravity="center"
@@ -49,8 +49,8 @@
 
     <EditText
         android:id="@+id/editScore"
-        android:layout_width="91dp"
-        android:layout_height="55dp"
+        android:layout_width="96dp"
+        android:layout_height="62dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
@@ -67,8 +67,8 @@
 
     <EditText
         android:id="@+id/editSum"
-        android:layout_width="154dp"
-        android:layout_height="55dp"
+        android:layout_width="130dp"
+        android:layout_height="62dp"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="34dp"
@@ -92,13 +92,14 @@
         android:layout_height="280dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="63dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         app:columnCount="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:rowCount="2"
-        tools:layout_editor_absoluteY="157dp">
+        app:layout_constraintTop_toBottomOf="@+id/editTimer"
+        app:rowCount="2">
 
         <TextView
             android:id="@+id/option1"
@@ -147,11 +148,11 @@
 
     <TextView
         android:id="@+id/outcome"
-        android:layout_width="205dp"
-        android:layout_height="77dp"
+        android:layout_width="191dp"
+        android:layout_height="56dp"
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="460dp"
         android:layout_marginEnd="121dp"
         android:layout_marginRight="121dp"
         android:background="#ED97779C"
@@ -162,7 +163,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/playAgain"
@@ -170,10 +171,10 @@
         android:layout_height="57dp"
         android:layout_marginStart="179dp"
         android:layout_marginLeft="179dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="142dp"
         android:layout_marginRight="142dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="40dp"
         android:text="Play Again"
         android:textSize="15sp"
         android:textStyle="bold|italic"
