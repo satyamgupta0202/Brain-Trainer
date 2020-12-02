@@ -22,9 +22,163 @@
         android:textColor="#0F1010"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:backgroundTint="#50D655"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTimer"
+        android:layout_width="83dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="26dp"
+        android:background="#F8E74F"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="5s"
+        android:inputType="number"
+        android:textColorHint="#0C0C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editScore"
+        android:layout_width="91dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#CF87DC"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="20/20"
+        android:inputType="number"
+        android:textColorHint="#0E0E0E"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editSum"
+        android:layout_width="154dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#55D15A"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="100 + 100"
+        android:inputType="number"
+        android:textColorHint="#070707"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editScore"
+        app:layout_constraintStart_toEndOf="@+id/editTimer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rowCount="2"
+        tools:layout_editor_absoluteY="157dp">
+
+        <TextView
+            android:id="@+id/option1"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:background="#76C6EA"
+            android:gravity="center"
+            android:hint="200"
+            android:textColor="@color/black"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/option2"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:background="#FA845F"
+            android:gravity="center"
+            android:hint="200"
+            android:textColor="@color/black"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/option3"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:background="#5BEADC"
+            android:gravity="center"
+            android:hint="200"
+            android:textColor="@color/black"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/option4"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:background="#A8A3F3"
+            android:gravity="center"
+            android:hint="200"
+            android:textColor="@color/black"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/outcome"
+        android:layout_width="205dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginRight="121dp"
+        android:background="#ED97779C"
+        android:gravity="center"
+        android:text="STATUS"
+        android:textColor="#0B0A0A"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="133dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="179dp"
+        android:layout_marginLeft="179dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="56dp"
+        android:text="Play Again"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outcome" />
 </androidx.constraintlayout.widget.ConstraintLayout>
