@@ -1,6 +1,7 @@
 package com.example.braintrainer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editSum;
     TextView editOutcome;
     TextView editScore;
+    TextView timer;
     int position;
     int ans;
     int ques;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button  button2;
     Button  button3;
     Button  button4;
+    Button playAgain;
     ArrayList<Integer> answer = new ArrayList<Integer>();
 
     public void ready(View view){
@@ -86,6 +89,19 @@ public class MainActivity extends AppCompatActivity {
         editOutcome = findViewById(R.id.outcome);
         editScore = findViewById(R.id.editScore);
         ready = findViewById(R.id.goButton);
-       newQuestion();
+        timer = findViewById(R.id.timer);
+        playAgain= findViewById(R.id.playAgain);
+        newQuestion();
+        CountDownTimer countDownTimer = new CountDownTimer(5100,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timer.setText(String.valueOf(millisUntilFinished/1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                    editOutcome.setText("DONE!!!!");
+            }
+        }.start();
     }
 }
