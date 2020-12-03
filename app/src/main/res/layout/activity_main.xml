@@ -163,6 +163,7 @@
         android:layout_marginEnd="142dp"
         android:layout_marginRight="142dp"
         android:layout_marginBottom="25dp"
+        android:onClick="playAgain"
         android:text="Play Again"
         android:textSize="15sp"
         android:textStyle="bold|italic"

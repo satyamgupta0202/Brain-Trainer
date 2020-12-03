@@ -31,6 +31,23 @@ public class MainActivity extends AppCompatActivity {
         ready.setVisibility(View.INVISIBLE);
     }
 
+    public void playAgain(View view) {
+        ans=0; ques=0; playAgain.setVisibility(View.INVISIBLE); timer.setText("30s"); editScore.setText(Integer.toString(ans)+"/"+Integer.toString(ques));
+        newQuestion();
+        CountDownTimer countDownTimer = new CountDownTimer(5100,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timer.setText(String.valueOf(millisUntilFinished/1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                editOutcome.setText("DONE!!!!");
+                playAgain.setVisibility(View.VISIBLE);
+            }
+        }.start();
+    }
+
     public void newQuestion(){
         Random rand = new Random();      /**takes random values**/
         int a = rand.nextInt(21);
@@ -91,17 +108,7 @@ public class MainActivity extends AppCompatActivity {
         ready = findViewById(R.id.goButton);
         timer = findViewById(R.id.timer);
         playAgain= findViewById(R.id.playAgain);
-        newQuestion();
-        CountDownTimer countDownTimer = new CountDownTimer(5100,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timer.setText(String.valueOf(millisUntilFinished/1000) + "s");
-            }
+        playAgain(findViewById(R.id.timer));
 
-            @Override
-            public void onFinish() {
-                    editOutcome.setText("DONE!!!!");
-            }
-        }.start();
     }
 }
