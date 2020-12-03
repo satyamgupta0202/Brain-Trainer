@@ -1,5 +1,7 @@
 package com.example.braintrainer;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -25,16 +27,19 @@ public class MainActivity extends AppCompatActivity {
     Button  button3;
     Button  button4;
     Button playAgain;
+    ConstraintLayout gameLayout;
     ArrayList<Integer> answer = new ArrayList<Integer>();
 
     public void ready(View view){
         ready.setVisibility(View.INVISIBLE);
+        gameLayout.setVisibility(View.VISIBLE );
+        playAgain(findViewById(R.id.timer));
     }
 
     public void playAgain(View view) {
         ans=0; ques=0; playAgain.setVisibility(View.INVISIBLE); timer.setText("30s"); editScore.setText(Integer.toString(ans)+"/"+Integer.toString(ques));
         newQuestion();
-        CountDownTimer countDownTimer = new CountDownTimer(5100,1000) {
+        CountDownTimer countDownTimer = new CountDownTimer(30100,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 timer.setText(String.valueOf(millisUntilFinished/1000) + "s");
@@ -108,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
         ready = findViewById(R.id.goButton);
         timer = findViewById(R.id.timer);
         playAgain= findViewById(R.id.playAgain);
-        playAgain(findViewById(R.id.timer));
-
+        gameLayout=findViewById(R.id.gameLayout);
+        ready.setVisibility(View.VISIBLE);
+        gameLayout.setVisibility(View.INVISIBLE );
     }
 }
