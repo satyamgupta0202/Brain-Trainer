@@ -54,10 +54,10 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:background="#3C3F41"
+        android:background="#E3E32A"
         android:ems="10"
         android:gravity="center"
-        android:hint="20/20"
+        android:hint="00/20"
         android:inputType="number"
         android:textColorHint="#0E0E0E"
         android:textSize="25sp"
@@ -103,10 +103,10 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="131dp"
-            android:layout_height="139dp"
+            android:layout_width="142dp"
+            android:layout_height="141dp"
             android:hint="40"
-            android:onClick="ready"
+            android:onClick="clicked"
             android:tag="1"
             android:textColor="#121111"
             android:textColorHint="#191818"
@@ -116,10 +116,10 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="139dp"
-            android:layout_height="139dp"
+            android:layout_width="143dp"
+            android:layout_height="140dp"
             android:hint="40"
-            android:onClick="ready"
+            android:onClick="clicked"
             android:tag="2"
             android:textColor="#121111"
             android:textColorHint="#191818"
@@ -129,10 +129,10 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="139dp"
-            android:layout_height="139dp"
+            android:layout_width="142dp"
+            android:layout_height="141dp"
             android:hint="40"
-            android:onClick="ready"
+            android:onClick="clicked"
             android:tag="3"
             android:textColor="#121111"
             android:textColorHint="#191818"
@@ -143,8 +143,9 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="139dp"
-            android:layout_height="139dp"
+            android:layout_height="142dp"
             android:hint="40"
+            android:onClick="clicked"
             android:tag="4"
             android:textColor="#121111"
             android:textColorHint="#191818"
@@ -153,40 +154,41 @@
             app:backgroundTint="#D8B755" />
     </androidx.gridlayout.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/outcome"
-        android:layout_width="191dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginRight="121dp"
-        android:background="#3C3F41"
-        android:gravity="center"
-        android:text="STATUS"
-        android:textColor="#0B0A0A"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/playAgain"
-        android:layout_width="133dp"
-        android:layout_height="57dp"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
         android:layout_marginStart="179dp"
         android:layout_marginLeft="179dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="142dp"
         android:layout_marginRight="142dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="25dp"
         android:text="Play Again"
         android:textSize="15sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/outcome"
+        android:layout_width="181dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FBFBFB"
+        android:gravity="center"
+        android:hint="Answer"
+        android:textColorHint="#0C0C0C"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playAgain"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outcome" />
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
